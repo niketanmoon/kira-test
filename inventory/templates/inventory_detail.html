@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    {% for item in items %}
+    <div class="card mt-4 mb-4" style="width: 100%">
+      <img
+        src="{% static 'images/inventory/inventory.jpeg' %}"
+        alt="Inventory image"
+      />
+      <div class="card-body">
+        <p class="card-text">ID: {{ item.id }}</p>
+        <p class="card-text">Name: {{ item.name }}</p>
+        <p class="card-text">Description: {{ item.description }}</p>
+        <p class="card-text">Note: {{ item.note }}</p>
+        <p class="card-text">Stock: {{item.stock}}</p>
+        <p class="card-text">Availability: {{item.availability}}</p>
+        <p class="card-text">Supplier: {{item.supplier.name}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-md-2"></div>
+</div>
+{% endblock %}

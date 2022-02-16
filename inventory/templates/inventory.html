@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="row">
+  {% for item in items %}
+  <div class="col-md-3">
+    <div class="card mt-4 mb-4" style="width: 100%">
+      <img
+        src="{% static 'images/inventory/inventory.jpeg' %}"
+        alt="Inventory image"
+      />
+      <div class="card-body">
+        <p class="card-text">Name: {{ item.inventory_name }}</p>
+        <p class="card-text">Availability: {{item.availability}}</p>
+        <p class="card-text">Supplier: {{item.supplier_name}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
