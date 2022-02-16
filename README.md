@@ -12,3 +12,8 @@ This will create the database
 `python manage.py createsuperuser`
 # Running the server
 `python manage.py runserver`
+
+## while running test it is important that the server is running
+## so after the above step open another terminal and run
+`python manage.py test`
+This will run the whole test
